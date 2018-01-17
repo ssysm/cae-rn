@@ -9,7 +9,10 @@
     "slug": "cae-rn",
     "privacy": "unlisted",
     "packagerOpts": {
-      "sourceExts": ["ts", "tsx"],
+      "sourceExts": [
+        "ts",
+        "tsx"
+      ],
       "transformer": "node_modules/react-native-typescript-transformer/index.js"
     },
     "ios": {
@@ -18,5 +21,7 @@
     "android": {
       "package": "com.theeditorstudio.aqourscall"
     }
-  }
+  },
+  "name": "caern",
+  "displayName": "Aqours Callbook RN"
 }

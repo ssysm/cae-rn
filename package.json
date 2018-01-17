@@ -3,24 +3,24 @@
   "version": "1.0.1",
   "private": true,
   "devDependencies": {
-    "react-native-scripts-ts": "1.13.0",
     "@types/jest": "^22.2.2",
     "@types/react": "^16.1.0",
     "@types/react-native": "^0.52.21",
     "@types/react-test-renderer": "^16.0.0",
-    "ts-jest": "^22.4.2",
-    "jest-expo": "26.0.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^22.4.3",
+    "jest-react-native": "^18.0.0",
+    "react-native-scripts-ts": "1.13.0",
     "react-native-typescript-transformer": "^1.2.3",
     "react-test-renderer": "16.3.0-alpha.1",
+    "ts-jest": "^22.4.2",
     "tslib": "^1.9.0",
     "typescript": "^2.8.1"
   },
-  "main": "./node_modules/react-native-scripts-ts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts-ts start",
-    "eject": "react-native-scripts-ts eject",
-    "android": "react-native-scripts-ts android",
-    "ios": "react-native-scripts-ts ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "test": "jest"
   },
   "jest": {
@@ -37,7 +37,7 @@
       "json",
       "node"
     ],
-    "preset": "jest-expo",
+    "preset": "react-native",
     "testMatch": [
       "**/__tests__/**/*.[tj]s?(x)",
       "**/?(*.)(spec|test).[tj]s?(x)"
@@ -48,7 +48,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "expo": "^26.0.0",
     "query-string": "^6.0.0",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0",
