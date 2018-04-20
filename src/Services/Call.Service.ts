@@ -11,11 +11,13 @@ export default class CallService {
         return axios.get(config.apiBase+'/call/search',{
             params:{page, songName, orderDir}
         })
+            .then(res=>res.data)
     }
     getCallDetail(songId:string):Promise<any>{
         return axios.get(config.apiBase+'/call/detail',{
             params:{"song.songId":songId}
         })
+            .then(res=>res.data)
     }
 
 }

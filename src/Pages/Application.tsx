@@ -3,6 +3,7 @@ import {ScrollView, Text, StyleSheet, View,} from 'react-native';
 import CallService from './../Services/Call.Service';
 import HelperIcon from './../Components/HelperIcon.Component';
 import CdCover from './../Components/CdCover.Component';
+import {Actions} from 'react-native-router-flux';
 
 export default class Application extends Component<{}> {
     constructor(props: any) {
@@ -11,6 +12,7 @@ export default class Application extends Component<{}> {
             red: null,
             latest: null
         }
+        this.handlePushEvent = this.handlePushEvent.bind(this);
     }
 
     callService = new CallService;
@@ -23,6 +25,10 @@ export default class Application extends Component<{}> {
                     latest: data.newest
                 })
             })
+    }
+
+    handlePushEvent(id: any) {
+        Actions.push('CallDetail', {songId: id})
     }
 
     render() {
@@ -38,23 +44,26 @@ export default class Application extends Component<{}> {
                     <ScrollView style={styles.row} horizontal={true}>
                         {this.state.red ? this.state.red.map((data: object, i: number) => {
                             return (
-                                <CdCover src={data.songCover} key={i} text={data.songName}/>
+                                <CdCover key={i} data={data} push={this.handlePushEvent}/>
                             )
                         }) : null}
                     </ScrollView>
                 </View>
                 <View style={styles.latest}>
                     <Text style={styles.redText}>最新更新</Text>
-                    <View style={{justifyContent: 'center',
+                    <View style={{
+                        justifyContent: 'center',
                         flexDirection: 'row',
-                        flexWrap: 'wrap'}}>
-                    {this.state.latest ? this.state.latest.map((data: object, i: number) => {
-                        return (
-                            <CdCover src={data.songCover} key={i} text={data.songName}/>
-                        )
-                    }) : null}
+                        flexWrap: 'wrap'
+                    }}>
+                        {this.state.latest ? this.state.latest.map((data: object, i: number) => {
+                            return (
+                                <CdCover data={data} key={i} push={this.handlePushEvent}/>
+                            )
+                        }) : null}
                     </View>
                 </View>
+                <View style={{height: 50}}/>
             </ScrollView>
         )
     }
@@ -63,11 +72,11 @@ export default class Application extends Component<{}> {
 const styles = StyleSheet.create({
     container: {
         paddingTop: 15,
-        paddingHorizontal:15,
-        paddingBottom:45
+        paddingHorizontal: 15,
+        paddingBottom: 45
     },
-    redText:{
-padding: 15,
+    redText: {
+        padding: 15,
         color: '#ff000f'
     },
     helperRow: {
@@ -77,7 +86,7 @@ padding: 15,
         justifyContent: 'space-between'
     },
     row: {
-        height: 150
+        height: 170
     },
     redRow: {
         paddingVertical: 20

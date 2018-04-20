@@ -1,9 +1,21 @@
 {
   "expo": {
+    "name": "Aqours Callbook RN",
+    "icon": "./assets/img/ic_launcher.png",
     "sdkVersion": "26.0.0",
+    "description": "This is Aqours Caller's React Native Stack Ver.",
+    "version": "1.0.0",
+    "githubUrl": "https://github.com/ssysm/cae-rn",
+    "slug": "cae-rn",
     "packagerOpts": {
       "sourceExts": ["ts", "tsx"],
       "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    },
+    "ios": {
+      "bundleIdentifier": "com.theeditorstudio.aqourscall"
+    },
+    "android": {
+      "package": "com.theeditorstudio.aqourscall"
     }
   }
 }
