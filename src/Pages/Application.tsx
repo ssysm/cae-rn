@@ -35,7 +35,7 @@ export default class Application extends Component<{}> {
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.helperRow}>
-                    <HelperIcon src={require("./../../assets/img/img_test_chika.png")} text="所有歌单"/>
+                    <HelperIcon src={require("./../../assets/img/img_test_chika.png")} text="所有歌单" onPress={()=>{Actions.push('AllCall')}}/>
                     <HelperIcon src={require("./../../assets/img/img_test_you.png")} text="BD系列"/>
                     <HelperIcon src={require("./../../assets/img/img_test_riko.png")} text="小队系列"/>
                 </View>

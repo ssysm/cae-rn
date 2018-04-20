@@ -7,6 +7,7 @@
     "version": "1.0.0",
     "githubUrl": "https://github.com/ssysm/cae-rn",
     "slug": "cae-rn",
+    "privacy": "unlisted",
     "packagerOpts": {
       "sourceExts": ["ts", "tsx"],
       "transformer": "node_modules/react-native-typescript-transformer/index.js"

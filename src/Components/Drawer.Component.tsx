@@ -10,7 +10,8 @@ export default class DrawerComponent extends Component<{}>{
     render(){
         return(
             <View style={styles.container}>
-                <DrawerButton text="Home" scene="Application"/>
+                <DrawerButton text="主页" scene="Application"/>
+                <DrawerButton text="搜索" scene="Search" />
             </View>
         )
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity,Text,Image,StyleSheet} from 'react-native';
 const HelperIcon = (props:any)=>{
     return(
-        <TouchableOpacity style={styles.helperIcon}>
+        <TouchableOpacity style={styles.helperIcon} {...props}>
             <Image source={props.src} style={styles.helperImage} />
             <Text>{props.text}</Text>
         </TouchableOpacity>
