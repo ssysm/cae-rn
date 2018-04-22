@@ -8,6 +8,7 @@ export default class CallService {
     getIndex():Promise<any>{
         return axios.get(config.apiBase+'/call/index')
             .then(res=>res.data)
+            .catch(err=>{alert(JSON.stringify(err))})
     }
     //搜索call表
     //@params:  page:number=页数
@@ -19,6 +20,7 @@ export default class CallService {
             params:{page, songName, orderDir}
         })
             .then(res=>res.data)
+            .catch(err=>{alert(JSON.stringify(err))})
     }
     //获取call表内容
     //@params:  songId:string:call表id
@@ -28,6 +30,7 @@ export default class CallService {
             params:{"song.songId":songId}
         })
             .then(res=>res.data)
+            .catch(err=>{alert(JSON.stringify(err))})
     }
 
 }
