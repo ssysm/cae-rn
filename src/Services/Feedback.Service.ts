@@ -1,6 +1,7 @@
 //导入axios和配置文件
 import axios from 'axios';
 import config from './../../config';
+//@ts-ignore
 import queryString from 'query-string';
 
 

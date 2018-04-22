@@ -22,10 +22,10 @@ export default class App extends React.Component<{}> {
                             <Scene key="splash" component={Splash} hideNavBar initial/>
                             <Scene component={Application} key="Application" title="主页"/>
                         </Scene>
-                        <Scene component={CallDetail} key="CallDetail" title="详细" />
+                        <Scene component={CallDetail} key="CallDetail" title="详细"/>
                         <Scene component={CallPDF} key="CallPDF" title="Call表内容"/>
-                        <Scene component={Search} key="Search" title="搜索" />
-                        <Scene component={AllCall} key="AllCall" title="所有歌单" />
+                        <Scene component={Search} key="Search" title="搜索"/>
+                        <Scene component={AllCall} key="AllCall" title="所有歌单"/>
                         <Scene component={Feedback} key="Feedback" title="意见反馈"/>
                     </Scene>
                 </Router>
