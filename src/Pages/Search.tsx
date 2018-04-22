@@ -15,6 +15,7 @@ export default class Search extends Component<{}> {
         };
         //搜索function
         this.search = this.search.bind(this);
+        this.onListEnd = this.onListEnd.bind(this);
     }
 
     //构造服务
@@ -29,6 +30,19 @@ export default class Search extends Component<{}> {
                     result: data.resultList
                 })
             })
+    }
+
+    //无限scroll
+    onListEnd(){
+        this.callService.searchCall(this.state.page+1,this.state.keyword)
+            .then(data=>{
+                if(data.successed){
+                    this.setState({
+                        result:[...data.resultList],
+                        page:this.state.page+1
+                    })
+                }
+            });
     }
 
     //渲染

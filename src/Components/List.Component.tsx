@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {List, ListItem} from "react-native-elements";
+import {ListItem} from "react-native-elements";
 import {FlatList} from "react-native";
 import {Actions} from 'react-native-router-flux';
 //列表卡片
@@ -25,14 +25,11 @@ export default class ListComponent extends Component<{}> {
     //渲染
     render() {
         return (
-            <List containerStyle={{borderTopWidth: 0, borderBottomWidth: 0}}>
                 <FlatList
                     data={this.props.result}
                     keyExtractor={item => item.songId}
-                    onEndReachedThreshold={50}
                     renderItem={MessageCard}
                 />
-            </List>
         )
     }
 }

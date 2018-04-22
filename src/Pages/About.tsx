@@ -26,6 +26,24 @@ export default class About extends Component<{}>{
                         Call表作者:kuma{"\n"}
                         微博:@kuma_loveliver{"\n"}
                     </Text>
+                    <Text style={styles.text}>
+                        This App is derivative version of Aqours Caller* ,rebuild using React Native.{"\n"}
+                        {"\n"}
+                        This App is purely a hobby product, used for callbook exchange and learning, without any commercial use.{"\n"}
+                        If you have any advice or feedback, you can find us down below.{"\n"}
+                        {"\n"}
+                        Contact Info:{"\n"}
+                        App Author:NA Cryptocurrency Mining Group(ssysm){"\n"}
+                        E-mail:pr@theeditorstudio.com{"\n"}
+                        Github:@ssysm{"\n"}
+                        {"\n"}
+                        Original Aqours Caller Author:灰灰{"\n"}
+                        E-mail:723290367@qq.com{"\n"}
+                        Weibo:@渡边家的小灰灰{"\n"}
+                        {"\n"}
+                        Callbook Author:kuma{"\n"}
+                        Weibo:@kuma_loveliver{"\n"}
+                    </Text>
                 </ScrollView>
             </View>
         )

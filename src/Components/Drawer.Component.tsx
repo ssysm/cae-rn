@@ -9,7 +9,7 @@ const DrawerButton = (props: any) => {
             }}
             style={styles.btn}
         >
-            <Text>{props.text}</Text>
+            <Text style={{fontSize:16}}>{props.text}</Text>
         </TouchableOpacity>
     )
 };
@@ -36,6 +36,5 @@ const styles = StyleSheet.create({
     },
     btn: {
         padding: 20,
-        fontSize:20
     }
 });
