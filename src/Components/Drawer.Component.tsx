@@ -22,6 +22,7 @@ export default class DrawerComponent extends Component<{}> {
                 <DrawerButton text="主页" scene="Application"/>
                 <DrawerButton text="搜索" scene="Search"/>
                 <DrawerButton text="意见反馈" scene="Feedback"/>
+                <DrawerButton text="关于我们" scene="About"/>
             </View>
         )
     }
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     btn: {
-        padding: 20
+        padding: 20,
+        fontSize:20
     }
 });

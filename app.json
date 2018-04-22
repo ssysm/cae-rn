@@ -4,7 +4,7 @@
     "icon": "./assets/img/ic_launcher.png",
     "sdkVersion": "26.0.0",
     "description": "This is Aqours Caller's React Native Stack Ver.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "githubUrl": "https://github.com/ssysm/cae-rn",
     "slug": "cae-rn",
     "privacy": "unlisted",

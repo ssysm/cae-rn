@@ -42,8 +42,8 @@ export default class Application extends Component<{}> {
             <ScrollView style={styles.container}>
                 <View style={styles.helperRow}>
                     <HelperIcon src={require("./../../assets/img/img_test_chika.png")} text="所有歌单" onPress={()=>{Actions.push('AllCall')}}/>
-                    <HelperIcon src={require("./../../assets/img/img_test_you.png")} text="BD系列"/>
-                    <HelperIcon src={require("./../../assets/img/img_test_riko.png")} text="小队系列"/>
+                    <HelperIcon src={require("./../../assets/img/img_test_you.png")} text="BD系列" onPress={()=>{alert('该模块暂时未开放')}}/>
+                    <HelperIcon src={require("./../../assets/img/img_test_riko.png")} text="小队系列" onPress={()=>{alert('该模块暂时未开放')}}/>
                 </View>
                 <View style={styles.redRow}>
                     <Text style={styles.redText}>热门歌曲</Text>
