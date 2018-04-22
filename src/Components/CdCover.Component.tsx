@@ -1,14 +1,13 @@
 import React,{Component} from "react";
-//@ts-ignore-file
 import ResponsiveImage from 'react-native-responsive-image';
 import {Text, TouchableOpacity} from "react-native";
-
-class CdCover extends Component<{}>{
-    constructor(props:any){
+//CD封面类
+export default class CdCover extends Component<{}>{
+    //构造器
+    constructor(props:any) {
         super(props);
     }
-
-
+    //渲染
     render(){
         return(
             <TouchableOpacity
@@ -23,5 +22,3 @@ class CdCover extends Component<{}>{
     }
 
 }
-
-export default CdCover

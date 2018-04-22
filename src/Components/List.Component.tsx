@@ -1,9 +1,8 @@
 import React,{Component} from 'react';
 import { List, ListItem } from "react-native-elements";
-import { View, Text, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { Actions } from 'react-native-router-flux';
-import CallService from './../Services/Call.Service';
-
+//列表卡片
 const MessageCard = (data)=>{
     return(
         <ListItem
@@ -16,15 +15,13 @@ const MessageCard = (data)=>{
       />
     )
 };
-
+//列表类
 export default class ListComponent extends Component<{}>{
+    //构造器
     constructor(props:any){
         super(props);
     }
-
-    callService = new CallService;
-
-
+    //渲染
     render(){
         return(
             <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }}>

@@ -4,8 +4,7 @@ import CallService from './../Services/Call.Service';
 import ResponsiveImage from 'react-native-responsive-image';
 import {Actions} from 'react-native-router-flux';
 import config from './../../config';
-
-
+//Call表详细
 class Detail extends Component<{}>{
     constructor(props:any){
         super(props);
@@ -54,17 +53,18 @@ class Detail extends Component<{}>{
         )
     }
 }
-
+//主类
 export default class CallDetail extends Component<{}> {
+    //构造器
     constructor(props: any) {
         super(props);
         this.state = {
             result: undefined
         };
     }
-
+    //构造服务
     callService = new CallService;
-
+    //组建渲染后运行
     componentDidMount() {
         this.callService.getCallDetail(this.props.songId)
             .then(data => {
@@ -73,7 +73,7 @@ export default class CallDetail extends Component<{}> {
                 })
             })
     }
-
+    //渲染
     render() {
         return (
             <View style={styles.container}>
@@ -86,7 +86,7 @@ export default class CallDetail extends Component<{}> {
         )
     }
 }
-
+//样式
 const styles = StyleSheet.create({
     container: {
         flex:1,

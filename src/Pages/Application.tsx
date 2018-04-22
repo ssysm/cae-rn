@@ -1,3 +1,4 @@
+//import dep.
 import React, {Component} from 'react';
 import {ScrollView, Text, StyleSheet, View,} from 'react-native';
 import CallService from './../Services/Call.Service';
@@ -5,18 +6,22 @@ import HelperIcon from './../Components/HelperIcon.Component';
 import CdCover from './../Components/CdCover.Component';
 import {Actions} from 'react-native-router-flux';
 
+//Main Application
 export default class Application extends Component<{}> {
+    //构造器
     constructor(props: any) {
         super(props);
         this.state = {
             red: null,
             latest: null
-        }
+        };
+        //push call detail
         this.handlePushEvent = this.handlePushEvent.bind(this);
     }
 
+    //构造服务
     callService = new CallService;
-
+    //组建渲染完毕
     componentDidMount() {
         this.callService.getIndex()
             .then(data => {
@@ -26,11 +31,12 @@ export default class Application extends Component<{}> {
                 })
             })
     }
-
+    //push call detail func
     handlePushEvent(id: any) {
         Actions.push('CallDetail', {songId: id})
     }
 
+    //渲染页面
     render() {
         return (
             <ScrollView style={styles.container}>
@@ -68,7 +74,7 @@ export default class Application extends Component<{}> {
         )
     }
 }
-
+//样式
 const styles = StyleSheet.create({
     container: {
         paddingTop: 15,
@@ -86,7 +92,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     row: {
-        height: 170
+        height: 160
     },
     redRow: {
         paddingVertical: 20
